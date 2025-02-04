@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://c1q1afbv6o0h5"]
+
+[ext_resource type="Texture2D" uid="uid://bdynr1lvwj75k" path="res://background.png" id="2_lt18j"]
+[ext_resource type="Texture2D" uid="uid://c4wbi5gj0t41x" path="res://macs2.png" id="2_ssetj"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1170.0
+offset_bottom = 2532.0
+texture = ExtResource("2_lt18j")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+position = Vector2(590, 1972)
+scale = Vector2(0.344971, 0.344971)
+texture = ExtResource("2_ssetj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D/Sprite2D"]
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D"]
