@@ -1,0 +1,52 @@
+[gd_scene load_steps=3 format=3 uid="uid://cxg7oi373o0do"]
+
+[ext_resource type="FontFile" uid="uid://bgi7pk5y2xcqv" path="res://arialroundedmtbold.ttf" id="1_5jker"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_th2eo"]
+font = ExtResource("1_5jker")
+font_size = 100
+outline_size = 1
+
+[node name="PauseMenu" type="Node2D"]
+metadata/_edit_vertical_guides_ = [358.0]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+offset_right = 716.0
+offset_bottom = 1281.0
+color = Color(0, 0, 0, 0.254902)
+
+[node name="Resume" type="Button" parent="CanvasLayer"]
+offset_left = 230.0
+offset_top = 561.0
+offset_right = 465.0
+offset_bottom = 662.0
+theme_override_fonts/font = ExtResource("1_5jker")
+theme_override_font_sizes/font_size = 50
+text = "Resume"
+flat = true
+icon_alignment = 1
+
+[node name="Quit" type="Button" parent="CanvasLayer"]
+offset_left = 229.0
+offset_top = 687.0
+offset_right = 467.0
+offset_bottom = 784.0
+theme_override_fonts/font = ExtResource("1_5jker")
+theme_override_font_sizes/font_size = 50
+text = "Quit"
+flat = true
+
+[node name="Paused" type="Label" parent="CanvasLayer"]
+offset_left = 172.0
+offset_top = 388.0
+offset_right = 531.0
+offset_bottom = 508.0
+text = "Paused"
+label_settings = SubResource("LabelSettings_th2eo")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="CanvasLayer/Resume" to="CanvasLayer" method="_on_resume_pressed"]
+[connection signal="pressed" from="CanvasLayer/Quit" to="CanvasLayer" method="_on_quit_pressed"]
