@@ -1,0 +1,53 @@
+[gd_scene load_steps=4 format=3 uid="uid://c2b4np68b4l78"]
+
+[ext_resource type="Texture2D" uid="uid://l3msfuubkst" path="res://backgroundpon.png" id="1_l47a4"]
+[ext_resource type="FontFile" uid="uid://bgi7pk5y2xcqv" path="res://arialroundedmtbold.ttf" id="2_qmw16"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_8c6kd"]
+font = ExtResource("2_qmw16")
+font_size = 50
+font_color = Color(0, 0, 0, 1)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_top = -70.0
+offset_right = 715.0
+offset_bottom = 1477.0
+texture = ExtResource("1_l47a4")
+expand_mode = 1
+
+[node name="Logout" type="Button" parent="."]
+offset_left = 256.0
+offset_top = 716.0
+offset_right = 486.0
+offset_bottom = 807.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+text = "Logout"
+
+[node name="Back" type="Button" parent="."]
+offset_left = 254.0
+offset_top = 832.0
+offset_right = 486.0
+offset_bottom = 923.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+text = "Back"
+
+[node name="Delete" type="Button" parent="."]
+offset_left = 217.0
+offset_top = 942.0
+offset_right = 518.0
+offset_bottom = 1031.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+text = "Delete Account"
+
+[node name="Label" type="Label" parent="."]
+offset_left = 46.0
+offset_top = 145.0
+offset_right = 479.0
+offset_bottom = 215.0
+text = "Welcome, <user>!"
+label_settings = SubResource("LabelSettings_8c6kd")

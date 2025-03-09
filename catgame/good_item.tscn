@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://bc3up40udrpj"]
+
+[ext_resource type="Script" path="res://good_item.gd" id="1_qrobw"]
+[ext_resource type="Texture2D" uid="uid://b8n5i4msuh5sy" path="res://food2.png" id="2_mtjjn"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nd47i"]
+size = Vector2(203, 189)
+
+[node name="good_item" type="Area2D"]
+script = ExtResource("1_qrobw")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-6, 1)
+scale = Vector2(0.129395, 0.129395)
+texture = ExtResource("2_mtjjn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(3.5, 0.5)
+shape = SubResource("RectangleShape2D_nd47i")
+one_way_collision_margin = 0.0
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

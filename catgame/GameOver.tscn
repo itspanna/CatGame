@@ -1,0 +1,53 @@
+[gd_scene load_steps=3 format=3 uid="uid://cxut0d871s7w6"]
+
+[ext_resource type="Script" path="res://GameOver.gd" id="1_uu8ax"]
+[ext_resource type="FontFile" uid="uid://bgi7pk5y2xcqv" path="res://arialroundedmtbold.ttf" id="2_ed0rt"]
+
+[node name="GameOver" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_uu8ax")
+metadata/_edit_vertical_guides_ = [360.0]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 723.0
+offset_bottom = 1285.0
+mouse_filter = 2
+color = Color(0.152941, 0.152941, 0.152941, 0.584314)
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 169.0
+offset_top = 368.0
+offset_right = 556.0
+offset_bottom = 465.0
+theme_override_fonts/font = ExtResource("2_ed0rt")
+theme_override_font_sizes/font_size = 70
+text = "Game over!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ReplayButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 145.0
+offset_top = 530.0
+offset_right = 569.0
+offset_bottom = 640.0
+theme_override_fonts/font = ExtResource("2_ed0rt")
+theme_override_font_sizes/font_size = 50
+text = "Replay
+"
+
+[node name="MainMenuButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 147.0
+offset_top = 664.0
+offset_right = 568.0
+offset_bottom = 779.0
+theme_override_fonts/font = ExtResource("2_ed0rt")
+theme_override_font_sizes/font_size = 50
+text = "Main Menu"
+
+[connection signal="pressed" from="ReplayButton" to="." method="_on_replay_button_pressed"]
+[connection signal="pressed" from="MainMenuButton" to="." method="_on_main_menu_button_pressed"]

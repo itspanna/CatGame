@@ -1,0 +1,88 @@
+[gd_scene load_steps=6 format=3 uid="uid://b207lupxlbgrc"]
+
+[ext_resource type="Script" path="res://login_screen.gd" id="1_m1xcq"]
+[ext_resource type="Texture2D" uid="uid://l3msfuubkst" path="res://backgroundpon.png" id="1_x2up0"]
+[ext_resource type="Script" path="res://texture_rect.gd" id="2_sri01"]
+[ext_resource type="FontFile" uid="uid://bgi7pk5y2xcqv" path="res://arialroundedmtbold.ttf" id="4_dr2yg"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_vl7wl"]
+font = ExtResource("4_dr2yg")
+font_size = 80
+font_color = Color(0.027451, 0.145098, 0.188235, 1)
+
+[node name="LoginScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_m1xcq")
+metadata/_edit_vertical_guides_ = [361.0]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_top = -4.0
+offset_right = 723.0
+offset_bottom = 1283.0
+texture = ExtResource("1_x2up0")
+expand_mode = 1
+script = ExtResource("2_sri01")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 201.0
+offset_top = 328.0
+offset_right = 527.0
+offset_bottom = 444.0
+text = "Login"
+label_settings = SubResource("LabelSettings_vl7wl")
+horizontal_alignment = 1
+
+[node name="Username" type="TextEdit" parent="."]
+layout_mode = 0
+offset_left = 217.0
+offset_top = 476.0
+offset_right = 504.0
+offset_bottom = 547.0
+placeholder_text = "Username"
+
+[node name="Password" type="TextEdit" parent="."]
+layout_mode = 0
+offset_left = 217.0
+offset_top = 585.0
+offset_right = 504.0
+offset_bottom = 662.0
+placeholder_text = "Password
+"
+
+[node name="Login" type="Button" parent="."]
+layout_mode = 0
+offset_left = 294.0
+offset_top = 823.0
+offset_right = 437.0
+offset_bottom = 890.0
+theme_override_colors/font_color = Color(0.027451, 0.145098, 0.188235, 1)
+theme_override_fonts/font = ExtResource("4_dr2yg")
+theme_override_font_sizes/font_size = 40
+text = "Profile
+"
+flat = true
+
+[node name="back" type="Button" parent="."]
+layout_mode = 0
+offset_left = 296.0
+offset_top = 918.0
+offset_right = 428.0
+offset_bottom = 978.0
+theme_override_colors/font_color = Color(0.027451, 0.145098, 0.188235, 1)
+theme_override_fonts/font = ExtResource("4_dr2yg")
+theme_override_font_sizes/font_size = 40
+text = "Back"
+flat = true
+
+[node name="Email" type="TextEdit" parent="."]
+layout_mode = 0
+offset_left = 213.0
+offset_top = 703.0
+offset_right = 504.0
+offset_bottom = 786.0
+placeholder_text = "Email"
+
+[connection signal="pressed" from="back" to="." method="_on_back_pressed"]

@@ -1,0 +1,68 @@
+[gd_scene load_steps=4 format=3 uid="uid://baj0npj2f3qgo"]
+
+[ext_resource type="Script" path="res://menu.gd" id="1_eh2ro"]
+[ext_resource type="Texture2D" uid="uid://b6yl36e54yyei" path="res://MENU.png" id="2_0opum"]
+[ext_resource type="FontFile" uid="uid://bgi7pk5y2xcqv" path="res://arialroundedmtbold.ttf" id="3_q6gte"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 722.0
+offset_bottom = 1282.0
+script = ExtResource("1_eh2ro")
+
+[node name="TextureRect" type="TextureRect" parent="Control"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = -161.0
+offset_right = 727.0
+offset_bottom = 1391.0
+texture = ExtResource("2_0opum")
+expand_mode = 1
+
+[node name="Start" type="Button" parent="Control"]
+modulate = Color(0.027451, 0.145098, 0.188235, 1)
+light_mask = 2
+texture_filter = 1
+layout_mode = 0
+offset_left = 498.0
+offset_top = 473.0
+offset_right = 684.0
+offset_bottom = 570.0
+theme_override_fonts/font = ExtResource("3_q6gte")
+theme_override_font_sizes/font_size = 70
+text = "Play!"
+flat = true
+text_overrun_behavior = 2
+autowrap_mode = 2
+
+[node name="Quit" type="Button" parent="Control"]
+modulate = Color(0.027451, 0.145098, 0.188235, 1)
+layout_mode = 0
+offset_left = 522.0
+offset_top = 666.0
+offset_right = 686.0
+offset_bottom = 748.0
+theme_override_fonts/font = ExtResource("3_q6gte")
+theme_override_font_sizes/font_size = 50
+text = "Quit"
+flat = true
+
+[node name="Login" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 517.0
+offset_top = 576.0
+offset_right = 687.0
+offset_bottom = 656.0
+theme_override_colors/font_color = Color(0.027451, 0.145098, 0.188235, 1)
+theme_override_fonts/font = ExtResource("3_q6gte")
+theme_override_font_sizes/font_size = 50
+text = "Login
+"
+flat = true
+
+[connection signal="pressed" from="Control/Start" to="Control" method="_on_start_pressed"]
+[connection signal="pressed" from="Control/Quit" to="Control" method="_on_quit_pressed"]
+[connection signal="pressed" from="Control/Login" to="Control" method="_on_login_pressed"]
