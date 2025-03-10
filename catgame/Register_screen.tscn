@@ -1,0 +1,101 @@
+[gd_scene load_steps=6 format=3 uid="uid://b207lupxlbgrc"]
+
+[ext_resource type="Script" uid="uid://cdpu6n3aqhgug" path="res://RegisterMenu.gd" id="1_1y73l"]
+[ext_resource type="Texture2D" uid="uid://l3msfuubkst" path="res://backgroundpon.png" id="2_aq2du"]
+[ext_resource type="Script" uid="uid://csjdenm5fenuk" path="res://texture_rect.gd" id="3_k228e"]
+[ext_resource type="FontFile" uid="uid://bgi7pk5y2xcqv" path="res://arialroundedmtbold.ttf" id="4_idy2j"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_vl7wl"]
+font = ExtResource("4_idy2j")
+font_size = 80
+font_color = Color(0.027451, 0.145098, 0.188235, 1)
+
+[node name="RegisterScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_1y73l")
+metadata/_edit_vertical_guides_ = [361.0]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_top = -4.0
+offset_right = 723.0
+offset_bottom = 1283.0
+texture = ExtResource("2_aq2du")
+expand_mode = 1
+script = ExtResource("3_k228e")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 201.0
+offset_top = 328.0
+offset_right = 527.0
+offset_bottom = 444.0
+text = "Register"
+label_settings = SubResource("LabelSettings_vl7wl")
+horizontal_alignment = 1
+
+[node name="Username" type="TextEdit" parent="."]
+layout_mode = 0
+offset_left = 217.0
+offset_top = 476.0
+offset_right = 504.0
+offset_bottom = 547.0
+placeholder_text = "Username"
+
+[node name="Password" type="TextEdit" parent="."]
+layout_mode = 0
+offset_left = 217.0
+offset_top = 585.0
+offset_right = 504.0
+offset_bottom = 662.0
+placeholder_text = "Password
+"
+
+[node name="Profile" type="Button" parent="."]
+layout_mode = 0
+offset_left = 289.0
+offset_top = 896.0
+offset_right = 432.0
+offset_bottom = 963.0
+theme_override_colors/font_color = Color(0.027451, 0.145098, 0.188235, 1)
+theme_override_fonts/font = ExtResource("4_idy2j")
+theme_override_font_sizes/font_size = 40
+text = "Profile
+"
+flat = true
+
+[node name="back" type="Button" parent="."]
+layout_mode = 0
+offset_left = 299.0
+offset_top = 973.0
+offset_right = 431.0
+offset_bottom = 1033.0
+theme_override_colors/font_color = Color(0.027451, 0.145098, 0.188235, 1)
+theme_override_fonts/font = ExtResource("4_idy2j")
+theme_override_font_sizes/font_size = 40
+text = "Back"
+flat = true
+
+[node name="Email" type="TextEdit" parent="."]
+layout_mode = 0
+offset_left = 213.0
+offset_top = 703.0
+offset_right = 504.0
+offset_bottom = 786.0
+placeholder_text = "Email"
+
+[node name="Register" type="Button" parent="."]
+layout_mode = 0
+offset_left = 287.0
+offset_top = 815.0
+offset_right = 437.0
+offset_bottom = 885.0
+theme_override_colors/font_color = Color(0.027451, 0.145098, 0.188235, 1)
+theme_override_fonts/font = ExtResource("4_idy2j")
+theme_override_font_sizes/font_size = 40
+text = "Register
+"
+flat = true
+
+[connection signal="pressed" from="back" to="." method="_on_back_pressed"]
