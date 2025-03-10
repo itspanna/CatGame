@@ -4,7 +4,7 @@ Game engine : Godot 4.3
 
 Ez a jatek egyenlore telefonon mukodik ( meg nem volt kifejezetten telefonon tesztelve ) 
 
-Ami hianyzik a mukodesben ( 03/09 ) :
+Ami hianyzik a mukodesben ( 03/10 ) :
   Login / register .
   game overnel levo gombok mukodese .
   pause menuben levo gombok mukodese .
@@ -22,6 +22,10 @@ Fobb tscn fajlok ismertetoje:
 
   Profile : A jatekos profilja, ahol a recordjait tudja megnezni.
 
+  Login : még nincs funkciójuk, code megirva, illetve a UI bekészítve  
 
-Utolso update: 2025-03-09
+  Register : még nincs funkciójuk, code megirva, illetve a UI bekészítve
+
+
+Utolso update: 2025-03-10
   
