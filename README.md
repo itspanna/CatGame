@@ -6,9 +6,10 @@ Ez a jatek egyenlore telefonon mukodik ( meg nem volt kifejezetten telefonon tes
 
 Ami hianyzik a mukodesben ( 03/10 ) :
   Login / register .
-  game overnel levo gombok mukodese .
-  pause menuben levo gombok mukodese .
+  game overnel levo gombok mukodese . // teljesítve (03/12)
+  pause menuben levo gombok mukodese . // teljesítve (03/12)
   Adatbazis nincs hozzaadva hogy elmentse a pontrekordokat . 
+  Random Item Sprite2D
 
 Fobb tscn fajlok ismertetoje: 
 
@@ -27,5 +28,5 @@ Fobb tscn fajlok ismertetoje:
   Register : még nincs funkciójuk, code megirva, illetve a UI bekészítve
 
 
-Utolso update: 2025-03-10
+Utolso update: 2025-03-12
   
