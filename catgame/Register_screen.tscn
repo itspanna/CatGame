@@ -1,8 +1,8 @@
 [gd_scene load_steps=6 format=3 uid="uid://b207lupxlbgrc"]
 
-[ext_resource type="Script" uid="uid://cdpu6n3aqhgug" path="res://RegisterMenu.gd" id="1_1y73l"]
+[ext_resource type="Script" path="res://RegisterMenu.gd" id="1_1y73l"]
 [ext_resource type="Texture2D" uid="uid://l3msfuubkst" path="res://backgroundpon.png" id="2_aq2du"]
-[ext_resource type="Script" uid="uid://csjdenm5fenuk" path="res://texture_rect.gd" id="3_k228e"]
+[ext_resource type="Script" path="res://texture_rect.gd" id="3_k228e"]
 [ext_resource type="FontFile" uid="uid://bgi7pk5y2xcqv" path="res://arialroundedmtbold.ttf" id="4_idy2j"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_vl7wl"]

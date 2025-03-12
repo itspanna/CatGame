@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://df3c0o53yewn8"]
+[gd_scene load_steps=17 format=3 uid="uid://df3c0o53yewn8"]
 
 [ext_resource type="Texture2D" uid="uid://l3msfuubkst" path="res://backgroundpon.png" id="1_qdfkf"]
 [ext_resource type="Script" path="res://game.gd" id="1_u86lw"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://5b5u54ujtn2i" path="res://bad_item.tscn" id="8_i6cop"]
 [ext_resource type="FontFile" uid="uid://bgi7pk5y2xcqv" path="res://arialroundedmtbold.ttf" id="9_0hh37"]
 [ext_resource type="Texture2D" uid="uid://ccmvwytq6qp3m" path="res://macs2.png" id="9_aye81"]
+[ext_resource type="Script" path="res://PauseButton.gd" id="11_f2xbc"]
 [ext_resource type="Script" path="res://pausemenu.gd" id="11_t0s23"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xbx7d"]
@@ -22,6 +23,12 @@ resource_local_to_scene = true
 font = ExtResource("9_0hh37")
 font_size = 50
 font_color = Color(0.0235294, 0.141176, 0.184314, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_mab67"]
+font = ExtResource("9_0hh37")
+font_size = 80
+font_color = Color(0, 0, 0, 1)
+shadow_size = 20
 
 [node name="Node2D" type="Node2D" groups=["PauseMenu"]]
 script = ExtResource("1_u86lw")
@@ -89,7 +96,7 @@ theme_override_font_sizes/font_size = 50
 text = "HP: 3
 "
 
-[node name="Pause" type="Button" parent="HUD"]
+[node name="PauseButton" type="Button" parent="HUD"]
 offset_left = 575.0
 offset_top = 138.0
 offset_right = 702.0
@@ -99,6 +106,7 @@ theme_override_fonts/font = ExtResource("9_0hh37")
 theme_override_font_sizes/font_size = 40
 text = "Pause"
 flat = true
+script = ExtResource("11_f2xbc")
 
 [node name="good_item" parent="." instance=ExtResource("7_eigdm")]
 position = Vector2(557, -243)
@@ -108,33 +116,57 @@ layout_mode = 3
 anchors_preset = 0
 offset_right = 722.0
 offset_bottom = 1287.0
+mouse_filter = 2
 script = ExtResource("11_t0s23")
 
 [node name="ColorRect" type="ColorRect" parent="PauseMenu"]
 layout_mode = 0
-offset_right = 719.0
-offset_bottom = 1278.0
+offset_top = -4.0
+offset_right = 723.0
+offset_bottom = 1284.0
 mouse_filter = 2
 color = Color(0, 0, 0, 0.439216)
 
-[node name="Resume" type="Button" parent="PauseMenu"]
+[node name="Label" type="Label" parent="PauseMenu/ColorRect"]
+layout_mode = 0
+offset_left = 166.0
+offset_top = 360.0
+offset_right = 569.0
+offset_bottom = 464.0
+text = "Paused"
+label_settings = SubResource("LabelSettings_mab67")
+horizontal_alignment = 1
+
+[node name="ResumeButton" type="Button" parent="PauseMenu"]
+process_mode = 3
 layout_mode = 0
 offset_left = 247.0
 offset_top = 569.0
 offset_right = 486.0
 offset_bottom = 689.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("9_0hh37")
+theme_override_font_sizes/font_size = 50
 text = "Resume
 "
+flat = true
 
-[node name="Menu" type="Button" parent="PauseMenu"]
+[node name="MenuButton" type="Button" parent="PauseMenu"]
+process_mode = 3
 layout_mode = 0
 offset_left = 247.0
 offset_top = 752.0
 offset_right = 490.0
 offset_bottom = 879.0
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("9_0hh37")
+theme_override_font_sizes/font_size = 50
+action_mode = 0
 text = "Menu"
+flat = true
 
-[connection signal="pressed" from="HUD/Pause" to="." method="_on_pause_pressed"]
+[connection signal="pressed" from="HUD/PauseButton" to="HUD/PauseButton" method="_on_pressed"]
 [connection signal="body_entered" from="good_item" to="HUD" method="_on_good_item_body_entered"]
-[connection signal="pressed" from="PauseMenu/Resume" to="PauseMenu" method="_on_resume_pressed"]
-[connection signal="pressed" from="PauseMenu/Menu" to="PauseMenu" method="_on_menu_pressed"]
+[connection signal="pressed" from="PauseMenu/ResumeButton" to="PauseMenu" method="_on_resume_button_pressed"]
+[connection signal="pressed" from="PauseMenu/MenuButton" to="PauseMenu" method="_on_menu_button_pressed"]

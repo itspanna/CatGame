@@ -1,20 +1,20 @@
 extends Control
 
+@onready var resume_button = $ResumeButton
+@onready var menu_button = $MenuButton
+
 func _ready():
-	hide()
-	
+	hide()  # Kezdetben elrejti a pause menüt
+
 func toggle_pause():
 	get_tree().paused = !get_tree().paused
 	visible = get_tree().paused
 
-	var pause_button = get_parent().get_node("HUD/Pause")
-	pause_button.visible = !get_tree().paused
+func _on_resume_button_pressed() -> void:
+	hide()
+	get_tree().paused = false
 
-func _on_resume_pressed() -> void:
-	print("pressed")
-	toggle_pause()
-
-func _on_menu_pressed() -> void:
-	print("Pressed")
+func _on_menu_button_pressed() -> void:
+	print("Menu gomb")
 	get_tree().paused = false
 	get_tree().change_scene_to_file("res://MainMenu.tscn")

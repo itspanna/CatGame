@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://c2b4np68b4l78"]
 
-[ext_resource type="Script" uid="uid://ceqe86u55l4gc" path="res://ProfileMenu.gd" id="1_k2f8d"]
+[ext_resource type="Script" path="res://ProfileMenu.gd" id="1_k2f8d"]
 [ext_resource type="Texture2D" uid="uid://l3msfuubkst" path="res://backgroundpon.png" id="1_l47a4"]
 [ext_resource type="FontFile" uid="uid://bgi7pk5y2xcqv" path="res://arialroundedmtbold.ttf" id="2_qmw16"]
 
@@ -15,6 +15,7 @@ anchors_preset = 0
 script = ExtResource("1_k2f8d")
 
 [node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
 offset_top = -70.0
 offset_right = 715.0
 offset_bottom = 1477.0
@@ -22,6 +23,7 @@ texture = ExtResource("1_l47a4")
 expand_mode = 1
 
 [node name="Logout" type="Button" parent="."]
+layout_mode = 0
 offset_left = 256.0
 offset_top = 716.0
 offset_right = 486.0
@@ -33,6 +35,7 @@ text = "Logout"
 flat = true
 
 [node name="Back" type="Button" parent="."]
+layout_mode = 0
 offset_left = 254.0
 offset_top = 832.0
 offset_right = 486.0
@@ -44,6 +47,7 @@ text = "Back"
 flat = true
 
 [node name="Delete" type="Button" parent="."]
+layout_mode = 0
 offset_left = 217.0
 offset_top = 942.0
 offset_right = 518.0
@@ -55,6 +59,7 @@ text = "Delete Account"
 flat = true
 
 [node name="Welcome" type="Label" parent="."]
+layout_mode = 0
 offset_left = 46.0
 offset_top = 145.0
 offset_right = 479.0
@@ -63,6 +68,7 @@ text = "Welcome, <user>!"
 label_settings = SubResource("LabelSettings_8c6kd")
 
 [node name="Email" type="Label" parent="."]
+layout_mode = 0
 offset_left = 54.0
 offset_top = 232.0
 offset_right = 575.0
@@ -73,6 +79,7 @@ theme_override_font_sizes/font_size = 40
 text = "Email:"
 
 [node name="Label" type="Label" parent="."]
+layout_mode = 0
 offset_left = 52.0
 offset_top = 379.0
 offset_right = 558.0
