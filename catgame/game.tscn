@@ -127,18 +127,7 @@ offset_bottom = 1284.0
 mouse_filter = 2
 color = Color(0, 0, 0, 0.439216)
 
-[node name="Label" type="Label" parent="PauseMenu/ColorRect"]
-layout_mode = 0
-offset_left = 166.0
-offset_top = 360.0
-offset_right = 569.0
-offset_bottom = 464.0
-text = "Paused"
-label_settings = SubResource("LabelSettings_mab67")
-horizontal_alignment = 1
-
 [node name="ResumeButton" type="Button" parent="PauseMenu"]
-process_mode = 3
 layout_mode = 0
 offset_left = 247.0
 offset_top = 569.0
@@ -152,7 +141,6 @@ text = "Resume
 flat = true
 
 [node name="MenuButton" type="Button" parent="PauseMenu"]
-process_mode = 3
 layout_mode = 0
 offset_left = 247.0
 offset_top = 752.0
@@ -162,11 +150,19 @@ mouse_default_cursor_shape = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("9_0hh37")
 theme_override_font_sizes/font_size = 50
-action_mode = 0
 text = "Menu"
 flat = true
 
-[connection signal="pressed" from="HUD/PauseButton" to="HUD/PauseButton" method="_on_pressed"]
+[node name="Label" type="Label" parent="PauseMenu"]
+layout_mode = 0
+offset_left = 166.0
+offset_top = 356.0
+offset_right = 569.0
+offset_bottom = 460.0
+text = "Paused"
+label_settings = SubResource("LabelSettings_mab67")
+horizontal_alignment = 1
+
 [connection signal="body_entered" from="good_item" to="HUD" method="_on_good_item_body_entered"]
 [connection signal="pressed" from="PauseMenu/ResumeButton" to="PauseMenu" method="_on_resume_button_pressed"]
 [connection signal="pressed" from="PauseMenu/MenuButton" to="PauseMenu" method="_on_menu_button_pressed"]

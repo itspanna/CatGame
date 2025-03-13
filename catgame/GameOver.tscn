@@ -16,11 +16,11 @@ offset_bottom = 1285.0
 mouse_filter = 2
 color = Color(0.152941, 0.152941, 0.152941, 0.584314)
 
-[node name="Label" type="Label" parent="ColorRect"]
+[node name="Label" type="Label" parent="."]
 layout_mode = 0
 offset_left = 169.0
 offset_top = 368.0
-offset_right = 561.0
+offset_right = 556.0
 offset_bottom = 465.0
 theme_override_fonts/font = ExtResource("2_ed0rt")
 theme_override_font_sizes/font_size = 70
@@ -29,7 +29,6 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="ReplayButton" type="Button" parent="."]
-process_mode = 3
 layout_mode = 0
 offset_left = 145.0
 offset_top = 530.0
@@ -37,12 +36,10 @@ offset_right = 569.0
 offset_bottom = 640.0
 theme_override_fonts/font = ExtResource("2_ed0rt")
 theme_override_font_sizes/font_size = 50
-action_mode = 0
 text = "Replay
 "
 
 [node name="MainMenuButton" type="Button" parent="."]
-process_mode = 3
 layout_mode = 0
 offset_left = 147.0
 offset_top = 664.0
