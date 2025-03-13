@@ -9,7 +9,7 @@ Ami hianyzik a mukodesben ( 03/10 ) :
   game overnel levo gombok mukodese . // teljesítve (03/12)
   pause menuben levo gombok mukodese . // teljesítve (03/12)
   Adatbazis nincs hozzaadva hogy elmentse a pontrekordokat . 
-  Random Item Sprite2D
+  Random Item Sprite2D // teljesítve (03/13)
 
 Fobb tscn fajlok ismertetoje: 
 
@@ -28,5 +28,5 @@ Fobb tscn fajlok ismertetoje:
   Register : még nincs funkciójuk, code megirva, illetve a UI bekészítve
 
 
-Utolso update: 2025-03-12
+Utolso update: 2025-03-13
   
